@@ -21,7 +21,7 @@ class UserTileWidget extends StatelessWidget {
       height: 80,
       child: Card(
         elevation: 5,
-        color: Colors.green[400],
+        color: Colors.green[300],
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
@@ -83,7 +83,7 @@ class UserTileWidget extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: size.height * 0.08,
+                  height: size.height * 0.1,
                   width: size.width * .18,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
