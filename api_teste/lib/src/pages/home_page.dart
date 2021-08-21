@@ -27,6 +27,14 @@ class _HomePageState extends State<HomePage> {
       }
     }
 
+    Future<List> refreshUsers() async {
+      users = await ListUser().getUsers();
+      print('carregou');
+      setState(() {});
+
+      return users;
+    }
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -34,11 +42,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: RefreshIndicator(
         onRefresh: () {
-          setState(() {
-            isLoaded = false;
-          });
-
-          return fetchUsers();
+          return refreshUsers();
         },
         child: FutureBuilder(
           future: fetchUsers(),
